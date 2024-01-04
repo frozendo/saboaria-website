@@ -13,6 +13,7 @@ body {
   flex-direction: column;
 }
 
+/* Header */
 header {
     width: 100%;
     height: 99vh;
@@ -34,14 +35,14 @@ header .header-image {
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-header .header-image p {
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    font-size: 48px;
-    font-weight: bold;
+    p {
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+    }
 }
 
 header .menu {
@@ -52,15 +53,15 @@ header .menu {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 1);
-}
 
-header .menu h1 {
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 48px;
-    text-shadow: -3px 3px #9e7b68;
-    margin-left: 15px;
-    margin-bottom: -10px;
+    h1 {
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 48px;
+        text-shadow: -3px 3px #9e7b68;
+        margin-left: 15px;
+        margin-bottom: -10px;
+    }
 }
 
 header .logo {
@@ -72,12 +73,12 @@ header .social-media {
     margin: 10px 15px 0px 0px ;
     display: flex;
     justify-content: space-around;
-}
 
-header .social-media i {
-    margin: 0px 10px;
-    font-size: 32px;
-    cursor: pointer;
+    i {
+        margin: 0px 10px;
+        font-size: 32px;
+        cursor: pointer;
+    }
 }
   
 .waves {
@@ -89,12 +90,14 @@ header .social-media i {
     max-height: 150px;
 }
 
+/* Header */
+
 main {
     width: 80vw;
     margin: 2em;
 }
 
-main .info {
+.info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,7 +105,7 @@ main .info {
     margin-bottom: 2em;
 }
 
-main .info .content {
+.info .content {
     width: 28%; 
     height: 330px;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -115,23 +118,22 @@ main .info .content {
     color: rgba(158,123,104,1);
     background-color: #f7f7f700;
     box-shadow: 1px 1px 2px black;
+
+    i, span {
+        display: block;
+        font-size: 32px;
+        font-weight: bold;
+        margin: 5px 0px;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 20px;
+        color: #000000;
+    }
 }
 
-main .info .content i,
-main .info .content span {
-    display: block;
-    font-size: 32px;
-    font-weight: bold;
-    margin: 5px 0px;
-}
-
-main .info .content .text {
-    text-align: center;
-    font-size: 20px;
-    color: #000000;
-}
-
-main .text-highlight {
+.text-highlight {
     text-align: center;
     font-size: 48px;
     font-weight: 800;
@@ -139,59 +141,55 @@ main .text-highlight {
     color: rgba(158,123,104,1);
 }
 
-main .products {
+.products {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 15px;
 }
 
-main .products .tabs {
+.products .tabs {
     border-bottom: 1px solid rgba(0, 0, 0, 1);
     display: flex;
     padding: 10px;
     justify-content: space-around;
 }
 
-main .products .tabs span {
+.products .tabs span {
     font-size: 20px;
     font-style: italic;
     color: rgba(158,123,104,1);
     cursor: pointer;
     padding: 1px 10px 3px 10px;
-    transition: color ease-in-out 500ms;
-    transition: background-color ease-in-out 500ms;
+    transition: color ease-in-out 500ms, background-color ease-in-out 500ms;
+
+    &:hover,
+    &.active {
+        background-color: rgba(158,123,104,1);
+        color: rgba(0, 0, 0, 1);
+        padding: 1px 10px 3px 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    &.active {
+        color: rgba(255, 255, 255, 1);
+    }
 }
 
-main .products .tabs span:hover {
-    background-color: rgba(158,123,104,1);
-    color: rgba(0, 0, 0, 1);
-    padding: 1px 10px 3px 10px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-main .products .tabs span.active {
-    background-color: rgba(158,123,104,1);
-    color: rgba(255, 255, 255, 1);
-    padding: 1px 10px 3px 10px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-main .products .content {
+.products .content {
     display: none;
     width: 100%;
     height: 80vh;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+
+    &.active {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
-main .products .content.active {
-    display: flex;
-    justify-content: space-around;
-}
-
-main .products .content .product-description {
+.products .content .product-description {
   height: 100%;
   width: 80%;
   border-bottom-left-radius: 15px;
@@ -199,27 +197,26 @@ main .products .content .product-description {
   flex-direction: column;
 }
 
-main .products .content .product-photo {
+.products .content .product-photo {
   height: 100%;
   width: 80%;
   border-bottom-right-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+      width: 80%;
+      display: none;
+      transition: 0.5s;
+  }
+
+  img.active {
+      display: block;
+  }
 }
 
-main .products .content .product-photo img {
-  width: 80%;
-  display: none;
-  transition: 0.5s;
-}
-
-main .products .content .product-photo img.active {
-  display: block;
-}
-
-/* Style the buttons that are used to open and close the accordion panel */
-main .products .content .accordion {
+.products .content .accordion {
     background-color: rgba(197,170,157,255);
     color: #000000;
     cursor: pointer;
@@ -230,29 +227,27 @@ main .products .content .accordion {
     border: none;
     outline: none;
     transition: 0.4s;
+
+    &.active {
+        background-color: rgba(158,123,104,255);
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: rgba(158,123,104,255);
+    }
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-main .products .content .active {
-    background-color: rgba(158,123,104,255);
-    margin-bottom: 0;
-}
-
-main .products .content .accordion:hover {
-    background-color: rgba(158,123,104,255);
-}
-
-/* Style the accordion panel. Note: hidden by default */
-main .products .content .panel {
+main .products .content .accordion-panel {
     padding: 0 18px;
     background-color: white;
     overflow: hidden;
     max-height: 0;
     transition: 0.5s;
-}
 
-main .products .content .panel.active {
-    max-height: 80vh;
+    &.active {
+        max-height: 80vh;
+    }
 }
 
   

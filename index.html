@@ -13,7 +13,7 @@
 
     <header class="header">      
         
-        <div class="menu">
+        <section class="menu">
             <div class="logo">
                 <img src="images/logo100.png" alt="logo" />
                 <h1>O Sol Saboaria</h1>
@@ -25,17 +25,17 @@
                 <i class="fa-brands fa-square-instagram"></i>
                 <i class="fa-brands fa-square-whatsapp"></i>
             </div>
-        </div>
+        </section>
 
-        <div class="background">
+        <section class="background">
             <div class="header-image">
                 <p>Sonhos elaborados, limpos e feitos à mão: eleve o seu dia a dia com nossos produtos artesanais!</p>
             </div>
 
-        </div>
+        </section>
   
         <!--Waves Container-->
-        <div>
+        <section>
           <svg
             class="waves"
             xmlns="http://www.w3.org/2000/svg"
@@ -72,14 +72,14 @@
               <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
             </g>
           </svg>
-        </div>
+        </section>
         <!--Waves end-->
         
     </header>
 
     <main>
 
-        <div class="info">
+        <section class="info">
             <div class="content">
                 <i class="fa-solid fa-soap"></i>
                 <span>Artesanal</span>
@@ -102,55 +102,55 @@
                     100% das materias primas utilizadas na fabricação de nossos produtos são de origem vegetal, e além disso não utilizamos materiais que realizem testes em animais.
                 </div>
             </div>
-        </div>
+        </section>
 
         <h1 class="text-highlight">Conheça nossos produtos!</h1>
 
-        <div class="products">
+        <section class="products">
             <div class="tabs">
-                <span id="soap">Sabonetes</span>
-                <span id="skin">Pele</span>
-                <span id="home">Para Casa</span>
-                <span id="relax">Para Relaxar</span>
+                <span id="soap" data-behavior="tabs" data-tab-active="false">Sabonetes</span>
+                <span id="skin" data-behavior="tabs" data-tab-active="false">Pele</span>
+                <span id="home" data-behavior="tabs" data-tab-active="false">Para Casa</span>
+                <span id="relax" data-behavior="tabs" data-tab-active="false">Para Relaxar</span>
             </div>
 
-            <div id="soap-content" class="content" style="background-color: red;">
+            <div id="soap-content" class="content" data-behavior="tabs-content">
                 <section class="product-description">
-                    <button id="test1" class="accordion">Section 1</button>
-                    <div class="panel">
+                    <button id="test1" class="accordion" data-behavior="accordion" data-accordion-active="false">Section 1</button>
+                    <div class="accordion-panel" data-accordion-panel-active="false">
                       <p>Lorem ipsum...</p>
                     </div>
                     
-                    <button id="test2" class="accordion">Section 2</button>
-                    <div class="panel">
+                    <button id="test2" class="accordion" data-behavior="accordion" data-accordion-active="false">Section 2</button>
+                    <div class="accordion-panel" data-accordion-panel-active="false">
                       <p>Lorem ipsum...</p>
                       <p>Lorem ipsum...</p>
                       <p>Lorem ipsum...</p>
                       <p>Lorem ipsum...</p>
                     </div>
                     
-                    <button id="test3" class="accordion">Section 3</button>
-                    <div class="panel">
+                    <button id="test3" class="accordion" data-behavior="accordion" data-accordion-active="false">Section 3</button>
+                    <div class="accordion-panel" data-accordion-panel-active="false">
                       <p>Lorem ipsum...</p>
                     </div>
                 </section>
                 <section class="product-photo">
-                    <img id="test1-picture" src="images/header.jpg" alt="header" />
-                    <img id="test2-picture" src="images/logo150.png" alt="header" />
-                    <img id="test3-picture" src="images/whatsapp_logo.png" alt="header" />
+                    <img id="test1-picture" src="images/header.jpg" alt="header" data-picture-active="false" />
+                    <img id="test2-picture" src="images/logo150.png" alt="header" data-picture-active="false" />
+                    <img id="test3-picture" src="images/whatsapp_logo.png" alt="header" data-picture-active="false" />
                 </section>
             </div>
 
-            <div id="skin-content" class="content" style="background-color: green;">
+            <div id="skin-content" class="content">
 
             </div>
-            <div id="home-content" class="content" style="background-color: blue;">
+            <div id="home-content" class="content">
 
             </div>
-            <div id="relax-content" class="content" style="background-color: purple;">
+            <div id="relax-content" class="content">
 
             </div>
-        </div>
+        </section>
 
     </main>
 
