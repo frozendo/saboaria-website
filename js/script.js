@@ -14,6 +14,7 @@ const disableProductContent = (id) => {
     const contentElement = document.getElementById(contentId);
     if (contentElement) {
         contentElement.classList.remove(activeClass);
+        contentElement.dataset.tabContentActive = false;
     }
 }
 
@@ -22,7 +23,6 @@ const enableTab = ($event) => {
     const target = $event.currentTarget;
 
     if (target) {
-        const id = target.id;
         disableTab();
         target.classList.add(activeClass);
         target.dataset.tabActive = true;
@@ -36,19 +36,24 @@ const enableProductContent = (id) => {
     const contentTarget = document.getElementById(contentId);
     if (contentTarget) {
         contentTarget.classList.add(activeClass);
+        contentTarget.dataset.tabContentActive = true;
     }
 }
 
-const toggleAccordion = ($event) => {
+const toggleAccordionEvent = ($event) => {
     $event.stopPropagation();
     const target = $event.currentTarget;
+    toggleAccordion(target);
+}
 
-    if (target) {
-        target.classList.toggle('active');
-        target.dataset.accordionActive = true;
+const toggleAccordion = (item) => {
+    if (item) {
+        disableAccordion();
+        item.classList.toggle('active');
+        item.dataset.accordionActive = true;
         
-        toggleAccordionPanel(target);
-        enableProductPicture(target.id);
+        toggleAccordionPanel(item);
+        enableProductPicture(item.id);
     }
 }
 
@@ -102,16 +107,23 @@ const initializeTabsBehavior = () => {
     tabs.forEach(tab => {
         tab.addEventListener('click', enableTab);
     });
+
+    const productContents = document.querySelectorAll('[data-behavior="tabs-content"]');
+    productContents[0].classList.add(activeClass);
 }
 
 const initializeAccordionBehavior = () => {
+    
     const productContents = document.querySelectorAll('[data-behavior="tabs-content"]');
-    productContents[0].classList.add(activeClass);
-    
-    const accordions = productContents[0].querySelectorAll('[data-behavior="accordion"]');
-    
-    accordions.forEach(accordion => {
-        accordion.addEventListener('click', toggleAccordion);
+
+    productContents.forEach(productContent => {
+        const accordions = productContent.querySelectorAll('[data-behavior="accordion"]');
+
+        toggleAccordion(accordions[0]);
+        
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', toggleAccordionEvent);
+        })
     })
 }
 
