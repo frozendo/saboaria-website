@@ -131,7 +131,7 @@ main .info .content .text {
     color: #000000;
 }
 
-main h1 {
+main .text-highlight {
     text-align: center;
     font-size: 48px;
     font-weight: 800;
@@ -187,8 +187,74 @@ main .products .content {
 }
 
 main .products .content.active {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .products .content .product-description {
+  height: 100%;
+  width: 80%;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .products .content .product-photo {
+  height: 100%;
+  width: 80%;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .products .content .product-photo img {
+  width: 80%;
+  display: none;
+  transition: 0.5s;
+}
+
+main .products .content .product-photo img.active {
   display: block;
 }
+
+/* Style the buttons that are used to open and close the accordion panel */
+main .products .content .accordion {
+    background-color: rgba(197,170,157,255);
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    margin: 8px 0px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+main .products .content .active {
+    background-color: rgba(158,123,104,255);
+    margin-bottom: 0;
+}
+
+main .products .content .accordion:hover {
+    background-color: rgba(158,123,104,255);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+main .products .content .panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s;
+}
+
+main .products .content .panel.active {
+    max-height: 80vh;
+}
+
   
 /* /* Shrinking for mobile */
 @media (max-width: 768px) {
