@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <header class="header">      
+    <header>
         
         <section class="menu">
             <div class="logo">
@@ -69,7 +69,7 @@
                 y="5"
                 fill="rgba(255,255,255,0.3)"
               />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(245,246,247)" />
             </g>
           </svg>
         </section>
@@ -114,7 +114,7 @@
                 <span id="relax" data-behavior="tabs" data-tab-active="false">Para Relaxar</span>
             </div>
 
-            <div id="soap-content" class="content" data-behavior="tabs-content" data-tab-content-active="false">
+            <div class="content" data-behavior="tabs-content" data-tab-content="soap" data-tab-content-active="false">
                 <section class="product-description">
                     <button id="soap-three-one" class="accordion" data-behavior="accordion" data-accordion-active="false">Sabonete 3 Em 1</button>
                     <div class="accordion-panel" data-accordion-panel-active="false">
@@ -137,12 +137,18 @@
                     </div>
                 </section>
                 <section class="product-photo">
-                    <img id="soap-three-one-picture" src="images/products/sabonete-tres-um.jpg" alt="header" data-picture-active="false" />
-                    <img id="soap-face-picture" src="images/products/sabonete-facial.jpg" alt="header" data-picture-active="false" />
+                    <div class="photo-container">
+                        <img src="images/products/sabonete-tres-um.jpg" alt="Sabonete Três Em 1" 
+                            data-accordion-picture="soap-three-one" 
+                            data-picture-active="false"  />
+                        <img src="images/products/sabonete-facial.jpg" alt="Sabonete Facial" 
+                            data-accordion-picture="soap-face" 
+                            data-picture-active="false" />
+                    </div>
                 </section>
             </div>
 
-            <div id="skin-content" class="content" data-behavior="tabs-content" data-tab-content-active="false">
+            <div class="content" data-behavior="tabs-content" data-tab-content="skin" data-tab-content-active="false">
                 <section class="product-description">
                     <button id="cream" class="accordion" data-behavior="accordion" data-accordion-active="false">Creme</button>
                     <div class="accordion-panel" data-accordion-panel-active="false">
@@ -153,7 +159,7 @@
                       </p>
                     </div>
                     
-                    <button id="body-splash" class="accordion" data-behavior="accordion" data-accordion-active="false">Body Spray</button>
+                    <button id="bodysplash" class="accordion" data-behavior="accordion" data-accordion-active="false">Body Spray</button>
                     <div class="accordion-panel" data-accordion-panel-active="false">
                       <p>
                           Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. 
@@ -164,12 +170,18 @@
                     </div>
                 </section>
                 <section class="product-photo">
-                    <img id="cream-picture" src="images/products/creme.jpg" alt="header" data-picture-active="false" />
-                    <img id="body-splash-picture" src="images/products/bodysplash.jpg" alt="header" data-picture-active="false" />
+                    <div class="photo-container">
+                      <img src="images/products/creme.jpg" alt="Creme Para Pele" 
+                          data-accordion-picture="cream" 
+                          data-picture-active="false" />
+                      <img src="images/products/bodysplash.jpg" alt="Body Splash" 
+                          data-accordion-picture="bodysplash" 
+                          data-picture-active="false" />
+                    </div>
                 </section>
             </div>
 
-            <div id="home-content" class="content" data-behavior="tabs-content" data-tab-content-active="false">
+            <div class="content" data-behavior="tabs-content" data-tab-content="home" data-tab-content-active="false">
                 <section class="product-description">
                     <button id="difusor" class="accordion" data-behavior="accordion" data-accordion-active="false">Difusor Gel</button>
                     <div class="accordion-panel" data-accordion-panel-active="false">
@@ -190,12 +202,18 @@
                     </div>
                 </section>
                 <section class="product-photo">
-                    <img id="difusor-picture" src="images/products/difusor.jpg" alt="header" data-picture-active="false" />
-                    <img id="homespray-picture" src="images/products/homespray.jpg" alt="header" data-picture-active="false" />
+                    <div class="photo-container">
+                        <img src="images/products/difusor.jpg" alt="Difusor em Gel" 
+                            data-accordion-picture="difusor" 
+                            data-picture-active="false" />
+                        <img src="images/products/homespray.jpg" alt="Home Spray" 
+                            data-accordion-picture="homespray"
+                            data-picture-active="false" />
+                    </div>
                 </section>
             </div>
 
-            <div id="relax-content" class="content" data-behavior="tabs-content" data-tab-content-active="false">
+            <div class="content" data-behavior="tabs-content" data-tab-content="relax" data-tab-content-active="false">
                 <section class="product-description">
                     <button id="sais" class="accordion" data-behavior="accordion" data-accordion-active="false">Sais de Banho</button>
                     <div class="accordion-panel" data-accordion-panel-active="false">
@@ -207,14 +225,19 @@
                     </div>
                 </section>
                 <section class="product-photo">
-                    <img id="sais-picture" src="images/products/sais.jpg" alt="header" data-picture-active="false" />
+                    <div class="photo-container">
+                        <img src="images/products/sais.jpg" alt="Sais de Banho" 
+                            data-accordion-picture="sais"
+                            data-picture-active="false" />
+                    </div>
                 </section>
             </div>
         </section>
 
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/tab.js"></script>
     
 </body>
 </html>
