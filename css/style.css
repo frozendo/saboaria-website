@@ -61,7 +61,6 @@ header .menu {
         font-size: 48px;
         text-shadow: -3px 3px #9e7b68;
         margin-left: 15px;
-        margin-bottom: -10px;
     }
 }
 
@@ -98,28 +97,32 @@ main {
     margin: 2em;
 }
 
+main > section {
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+.component {
+    box-shadow: -1px 1px 5px rgba(0,0,0,1);
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
 .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 2em;
 }
 
 .info .content {
-    width: 28%; 
+    width: 30%; 
     height: 330px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 20px;
     color: rgba(158,123,104,1);
-    background-color: #f7f7f700;
-    box-shadow: -1px 1px 5px black;
-    background-color: rgb(255, 255, 255);
 
     i, span {
         display: block;
@@ -137,22 +140,14 @@ main {
 
 .text-highlight {
     text-align: center;
-    font-size: 48px;
+    font-size: 35px;
     font-weight: 800;
-    margin: 10px;
+    margin-bottom: 1em;
     color: rgba(158,123,104,1);
 }
 
-.products {
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 15px;
-    box-shadow: -1px 1px 5px rgba(0,0,0,1);
-    background-color: rgb(255, 255, 255);
-}
-
 .products .tabs {
-    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     display: flex;
     padding: 10px;
     justify-content: space-around;
@@ -232,20 +227,6 @@ main {
       margin-top: 40px; 
       transition: opacity 1s ease-in-out;
   }
-
-  /* img {
-      width: 30%;
-      height: 60%;
-      position: absolute;
-      border-radius: 10px;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-  }
-
-  img.active {
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-  } */
 }
 
 .products .content .accordion {
@@ -285,6 +266,48 @@ main .products .content .accordion-panel {
     }
 }
 
+.testimonies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.testimonies .carousel {
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.testimonies .carousel .client {
+
+    p {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.8);
+        margin-bottom: 10px;
+        min-height: 15vh;
+    }
+
+    span {
+        display: block;
+    }
+
+    span.name {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    span.city {
+        font-size: 14px;
+        font-style: italic;
+    }
+
+}
+
   
 /* /* Shrinking for mobile */
 @media (max-width: 768px) {
@@ -292,60 +315,6 @@ main .products .content .accordion-panel {
       height: 40px;
       min-height: 40px;
   }
-}
-
-@keyframes slide-down {
-    0% {
-        max-height: 10vh;
-    }
-    14% {
-        max-height: 20vh;
-    }
-    28% {
-        max-height: 30vh;
-    }
-    42% {
-        max-height: 40vh;
-    }
-    56% {
-        max-height: 50vh;
-    }
-    70% {
-        max-height: 60vh;
-    }
-    84% {
-        max-height: 70vh;
-    }
-    100% {
-        max-height: 80vh;
-    }
-}
-
-@keyframes slide-up {
-    0% {
-        max-height: 75vh;
-    }
-    14% {
-        max-height: 60vh;
-    }
-    28% {
-        max-height: 50vh;
-    }
-    42% {
-        max-height: 40vh;
-    }
-    56% {
-        max-height: 30vh;
-    }
-    70% {
-        max-height: 20vh;
-    }
-    84% {
-        max-height: 10vh;
-    }
-    100% {
-        max-height: 0vh;
-    }
 }
 
 /* 

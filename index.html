@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Sol Saboaria</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/all.css" />
 
@@ -80,7 +83,7 @@
     <main>
 
         <section class="info">
-            <div class="content">
+            <div class="content component">
                 <i class="fa-solid fa-soap"></i>
                 <span>Artesanal</span>
                 <div class="text">
@@ -88,14 +91,14 @@
                     Com isso, nenhum item é igual ao outro, e a cada utilização, temos novas experiências.
                 </div>
             </div>
-            <div class="content">
+            <div class="content component">
                 <i class="fa-solid fa-gem"></i>
                 <span>Qualidade</span>
                 <div class="text">
                     Nossos produtos passam por um rigoroso controle, para garantir o padrão e a qualidade que nossos clientes merecem.
                 </div>
             </div>
-            <div class="content">
+            <div class="content component">
                 <i class="fa-solid fa-leaf"></i>
                 <span>Vegano</span>
                 <div class="text">
@@ -106,7 +109,7 @@
 
         <h1 class="text-highlight">Conheça nossos produtos!</h1>
 
-        <section class="products">
+        <section class="products component">
             <div class="tabs">
                 <span id="soap" data-behavior="tabs" data-tab-active="false">Sabonetes</span>
                 <span id="skin" data-behavior="tabs" data-tab-active="false">Pele</span>
@@ -234,8 +237,56 @@
             </div>
         </section>
 
+        <h1 class="text-highlight">Veja depoimentos de quem já conhece nossos produtos!</h1>
+
+        <section class="testimonies">
+            <div class="carousel component">
+                <div class="client">
+                    <p>
+                      Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Pellentesque nec nulla ligula. 
+                      Donec gravida turpis a vulputate ultricies. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. 
+                      Sapien in monti palavris qui num significa nadis i pareci latim.
+                    </p>
+                    <span class="name">Mussum</span>
+                    <span class="city">São José do Rio Preto - SP</span>
+                </div>
+                <div class="client">
+                    <p>
+                      Viva Forevis aptent taciti sociosqu ad litora torquent. 
+                      Quem num gosta di mé, boa gentis num é. 
+                      Mé faiz elementum girarzis, nisi eros vermeio. 
+                      Detraxit consequat et quo num tendi nada.
+                    </p>
+                    <span class="name">Zacarias</span>
+                    <span class="city">Araraquara - SP</span>
+                </div>
+                <div class="client">
+                    <p>
+                      Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Per aumento de cachacis, eu reclamis. 
+                      Interagi no mé, cursus quis, vehicula ac nisi. Nulla id gravida magna, ut semper sapien.
+                    </p>
+                    <span class="name">Didi</span>
+                    <span class="city">Mirassol - SP</span>
+                </div>
+                <div class="client">
+                    <p>
+                      Sapien in monti palavris qui num significa nadis i pareci latim. 
+                      Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. 
+                      Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. 
+                      Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+                    </p>
+                    <span class="name">Dedé</span>
+                    <span class="city">Amsterdam - NL</span>
+                </div>
+            </div>
+                
+        </section>
+
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/tab.js"></script>
     
