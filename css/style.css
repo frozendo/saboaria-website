@@ -108,13 +108,13 @@ main > section {
     border-radius: 15px;
 }
 
-.info {
+#info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.info .content {
+#info .content {
     width: 30%; 
     height: 330px;
     display: flex;
@@ -146,14 +146,14 @@ main > section {
     color: rgba(158,123,104,1);
 }
 
-.products .tabs {
+#products .tabs {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     display: flex;
     padding: 10px;
     justify-content: space-around;
 }
 
-.products .tabs span {
+#products .tabs span {
     font-size: 20px;
     font-style: italic;
     color: rgba(158,123,104,1);
@@ -174,7 +174,7 @@ main > section {
     }
 }
 
-.products .content {
+#products .content {
     display: none;
     width: 100%;
     height: 80vh;
@@ -189,7 +189,7 @@ main > section {
     }
 }
 
-.products .content .product-description {
+#products .content .product-description {
     height: 100%;
     width: 80%;
     border-bottom-left-radius: 15px;
@@ -198,7 +198,7 @@ main > section {
     margin: 15px 10px;
 }
 
-.products .content .product-photo {
+#products .content .product-photo {
   height: 100%;
   width: 80%;
   border-bottom-right-radius: 15px;
@@ -229,7 +229,7 @@ main > section {
   }
 }
 
-.products .content .accordion {
+#products .content .accordion {
     background-color: rgba(197,170,157,255);
     color: #000000;
     cursor: pointer;
@@ -252,7 +252,7 @@ main > section {
     }
 }
 
-main .products .content .accordion-panel {
+#products .content .accordion-panel {
     padding: 0 18px;
     background-color: white;
     overflow: hidden;
@@ -266,14 +266,14 @@ main .products .content .accordion-panel {
     }
 }
 
-.testimonies {
+#testimonies {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-.testimonies .carousel {
+#testimonies .carousel {
     width: 50%;
     height: 40vh;
     display: flex;
@@ -282,7 +282,7 @@ main .products .content .accordion-panel {
     padding: 15px;
 }
 
-.testimonies .carousel .client {
+#testimonies .carousel .client {
 
     p {
         font-size: 18px;
@@ -306,6 +306,31 @@ main .products .content .accordion-panel {
         font-style: italic;
     }
 
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#contact .item {
+    padding: 10px;
+    min-width: 280px;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(158,123,104,1);
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(158,123,104,1);
+  font-size: 14px;
+  text-align: center;
 }
 
   
