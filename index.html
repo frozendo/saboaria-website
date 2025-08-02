@@ -1,317 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Sol Saboaria</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sol e Espuma Saboaria - Produtos artesanais 100% naturais. Sabonetes, cremes, difusores e velas para cuidar da sua pele e bem-estar.">
+  <meta name="keywords" content="saboaria, produtos naturais, sabonetes artesanais, cremes hidratantes, difusores, velas, cuidados com a pele">
+  <meta name="author" content="Sol e Espuma Saboaria">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soleespuma.com.br/">
+  <meta property="og:title" content="Sol e Espuma Saboaria">
+  <meta property="og:description" content="Produtos artesanais 100% naturais para cuidar da sua pele e bem-estar.">
+  <meta property="og:image" content="./images/logo-200.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://soleespuma.com.br/">
+  <meta property="twitter:title" content="Sol e Espuma Saboaria">
+  <meta property="twitter:description" content="Produtos artesanais 100% naturais para cuidar da sua pele e bem-estar.">
+  <meta property="twitter:image" content="./images/logo-200.png">
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/all.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.ico">
+  <link rel="apple-touch-icon" href="./images/favicon.ico">
+
+  <title>Sol e Espuma Saboaria - Produtos Artesanais 100% Naturais</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/main.js" as="script">
+  <link rel="preload" href="./images/banner.png" as="image">
+  <!-- <link rel="preload" href="webfonts/Klaristha-Thin.woff" as="font" type="font/woff"  crossorigin="anonymous"> -->
+  
+  <!-- Stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
 
 </head>
+
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-     <header>
-        
-        <section class="menu">
-            <div class="logo">
-                <img src="images/logo100.png" alt="logo" />
-                <h1>O Sol Saboaria</h1>
-            </div>
-            <div class="social-media">
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-square-instagram"></i>
-                <i class="fa-brands fa-square-whatsapp"></i>
-            </div>
-        </section>
+  <!-- Header Bar (Hidden initially, shows on scroll) -->
+  <header id="header" class="header" role="banner">
+    <div class="header-content" aria-label="Barra de navegação">
+      <div class="header-logo">
+        <img src="./images/logo-100.png" alt="Logo Sol e Espuma Saboaria">
+        <span class="header-brand">SOL E ESPUMA</span>
+      </div>
+      <nav class="header-social" role="navigation" aria-label="Redes sociais">
+        <a href="https://www.instagram.com/soleespuma/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Siga-nos no Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/solespuma/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Siga-nos no Facebook">
+          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://wa.me/+5516988099057" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Entre em contato via WhatsApp">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
 
-        <section class="background">
-            <div class="header-image">
-                <p>Sonhos elaborados, limpos e feitos à mão: eleve o seu dia a dia com nossos produtos artesanais!</p>
-            </div>
+   <!-- Banner -->
+   <section id="banner" class="banner" role="banner" aria-labelledby="banner-title">
+    <div class="logo"><img src="./images/logo-200.png" alt="Logo Sol e Espuma Saboaria"></div>
+    <h1 id="banner-title">SOL E ESPUMA</h1>
+    <p class="slogan">A arte da brilho a vida!</p>
+    <a id="btn-purchase" href="https://wa.me/c/5516988099057" target="_blank" rel="noopener noreferrer" aria-label="Comprar produtos agora via WhatsApp">Compre Agora</a>
+  </section>
 
-        </section>
-  
-        <section>
-          <svg
-            class="waves"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28"
-            preserveAspectRatio="none"
-            shape-rendering="auto"
-          >
-            <defs>
-              <path
-                id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-              />
-            </defs>
-            <g class="parallax">
-              <use
-                xlink:href="#gentle-wave"
-                x="48"
-                y="0"
-                fill="rgba(255,255,255,0.7)"
-              />
-              <use
-                xlink:href="#gentle-wave"
-                x="48"
-                y="3"
-                fill="rgba(255,255,255,0.5)"
-              />
-              <use
-                xlink:href="#gentle-wave"
-                x="48"
-                y="5"
-                fill="rgba(255,255,255,0.3)"
-              />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(245,246,247)" />
-            </g>
-          </svg>
-        </section>
-        
-    </header>
+  <main id="main-content" role="main">
 
-    <main>
+    <!-- Intro -->
+    <section id="intro" class="card-content" aria-labelledby="intro-title">
+        <div class="card-content-image">
+            <img src="./images/intro.png" alt="Produtos 100% Naturais - Saboaria artesanal" loading="lazy" />
+        </div>
+        <div class="card-content-text">
+            <h1 id="intro-title" class="text-header">Produtos 100% Naturais</h1>
+            <p class="description">
+              A Sol e Espuma nasceu do desejo de transformar o autocuidado em um momento especial — íntimo, sensorial e cheio de significado.
+            </p>
+            <p class="description">
+              Somos uma saboaria artesanal onde cada produto é feito à mão, com ingredientes naturais e atenção a cada etapa. 
+              Acreditamos que a beleza está nos detalhes: no aroma que desperta uma memória boa, na textura suave que acolhe a pele, na luz suave que acalma o ambiente.
+            </p>
+            <p class="description">
+              Cada fórmula é pensada para proporcionar bem-estar, beleza e presença. São texturas suaves, aromas que acolhem e ingredientes puros que cuidam com leveza.
+              Nosso propósito é simples e verdadeiro: oferecer mais do que produtos — entregar pequenos rituais de beleza e equilíbrio, que despertam o brilho que já existe em cada pessoa.
+            </p>
+        </div>
+    </section>
 
-        <section id="info">
-            <div class="content component">
-                <i class="fa-solid fa-soap"></i>
-                <span>Artesanal</span>
-                <div class="text">
-                    Todos os nossos produtos são artesanais, feitos a mão. 
-                    Com isso, nenhum item é igual ao outro, e a cada utilização, temos novas experiências.
-                </div>
-            </div>
-            <div class="content component">
-                <i class="fa-solid fa-gem"></i>
-                <span>Qualidade</span>
-                <div class="text">
-                    Nossos produtos passam por um rigoroso controle, para garantir o padrão e a qualidade que nossos clientes merecem.
-                </div>
-            </div>
-            <div class="content component">
-                <i class="fa-solid fa-leaf"></i>
-                <span>Vegano</span>
-                <div class="text">
-                    100% das materias primas utilizadas na fabricação de nossos produtos são de origem vegetal, e além disso não utilizamos materiais que realizem testes em animais.
-                </div>
-            </div>
-        </section>
+      <!-- Self Care -->
+      <section id="self-care" class="card-content" aria-labelledby="self-care-title">
+          <div class="card-content-text">
+              <h1 id="self-care-title" class="text-header text-white">Arte em Cada Toque</h1>
+              <div class="description text-white">
+                <p>
+                  Na delicadeza de um toque, na leveza de um aroma, nasce a arte que transforma o cotidiano em encanto. 
+                  A <b>Sol e Espuma</b> é o encontro entre natureza e beleza, onde produto é moldado à mão como quem pinta um quadro com carinho.
+                </p>
+                <p>
+                  Nossos produtos são mais que cuidados — são poesia em forma de espuma, luz e perfume. Um convite a despertar o brilho que já vive em você.
+                </p>
+                <p>
+                  Acreditamos que o autocuidado é sagrado. Que a beleza mora nos gestos pequenos. E que a vida, quando cuidada com arte, reflete mais luz.
+                </p>
+              </div>
+          </div>
+          <div class="card-content-image">
+              <img src="./images/self-care.png" alt="Sol e Espuma - Produtos para bem-estar" loading="lazy" />
+          </div>
+      </section>
 
-        <h1 class="text-highlight">Conheça nossos produtos!</h1>
+      <!-- Products -->
+      <section id="products" class="carousel-content" aria-labelledby="products-title">
+        <h2 id="products-title">Produtos que encantam</h2>
+        <div class="products-items">
+          <div class="product-nav">
+            <button class="carousel-nav prev" id="btn-product-prev" aria-label="Produto anterior" type="button">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+          </div>
 
-        <section id="products" class="component">
-            <div class="tabs">
-                <span id="soap" data-behavior="tabs" data-tab-active="false">Sabonetes</span>
-                <span id="skin" data-behavior="tabs" data-tab-active="false">Pele</span>
-                <span id="home" data-behavior="tabs" data-tab-active="false">Para Casa</span>
-                <span id="relax" data-behavior="tabs" data-tab-active="false">Para Relaxar</span>
-            </div>
+          <div id="productsCarousel" class="products-content" role="region" aria-label="Carrossel de produtos">
 
-            <div class="content" data-behavior="tabs-content" data-tab-content="soap" data-tab-content-active="false">
-                <section class="product-description">
-                    <button id="soap-three-one" class="accordion" data-behavior="accordion" data-accordion-active="false">Sabonete 3 Em 1</button>
-                    <div class="accordion-panel" data-accordion-panel-active="false">
-                      <p>
-                          Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci latim. 
-                          Si num tem leite então bota uma pinga aí cumpadi! 
-                          Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. 
-                          Quem manda na minha terra sou euzis!
-                      </p>
-                    </div>
-                    
-                    <button id="soap-face" class="accordion" data-behavior="accordion" data-accordion-active="false">Sabonete Facial</button>
-                    <div class="accordion-panel" data-accordion-panel-active="false">
-                      <p>
-                          Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. 
-                          Não sou faixa preta cumpadi, sou preto inteiris, inteiris. 
-                          Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. 
-                          Interagi no mé, cursus quis, vehicula ac nisi.
-                      </p>
-                    </div>
-                </section>
-                <section class="product-photo">
-                    <div class="photo-container">
-                        <img src="images/products/sabonete-tres-um.jpg" alt="Sabonete Três Em 1" 
-                            data-accordion-picture="soap-three-one" 
-                            data-picture-active="false"  />
-                        <img src="images/products/sabonete-facial.jpg" alt="Sabonete Facial" 
-                            data-accordion-picture="soap-face" 
-                            data-picture-active="false" />
-                    </div>
-                </section>
+            <div class="carousel-card product-card active" data-product-index="0" aria-hidden="false">
+              <div class="carousel-card-content">
+                <h2>Sabonetes</h2>
+                <img src="./images/product-left.png" alt="Sabonetes artesanais" loading="lazy" />
+              </div>
+              <div class="carousel-card-text">
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, 
+                  making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more 
+                  obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
+                  Lorem Ipsum</p>
+              </div>
             </div>
+            
+            <div class="carousel-card product-card" data-product-index="1" aria-hidden="true">
+              <div class="carousel-card-content">
+                <h2>Cremes</h2>
+                <img src="./images/product-left.png" alt="Cremes hidratantes" loading="lazy" />
+              </div>
+              <div class="carousel-card-text">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into 
+                  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum</p>
+              </div>
+            </div>
+            
+            <div class="carousel-card product-card" data-product-index="2" aria-hidden="true">
+              <div class="carousel-card-content">
+                <h2>Difusores</h2>
+                <img src="./images/product-right.png" alt="Difusores de aromas" loading="lazy" />
+              </div>
+              <div class="carousel-card-text">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is 
+                  that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing 
+                  packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites.</p>
+              </div>
+            </div>
+            
+            <div class="carousel-card product-card" data-product-index="3" aria-hidden="true">
+              <div class="carousel-card-content">
+                <h2>Velas</h2>
+                <img src="./images/product-right.png" alt="Velas aromáticas" loading="lazy" />
+              </div>
+              <div class="carousel-card-text">
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or 
+                  randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing
+                  hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator.</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="product-nav">
+            <button class="carousel-nav next" id="btn-product-next" aria-label="Próximo produto" type="button">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
 
-            <div class="content" data-behavior="tabs-content" data-tab-content="skin" data-tab-content-active="false">
-                <section class="product-description">
-                    <button id="cream" class="accordion" data-behavior="accordion" data-accordion-active="false">Creme</button>
-                    <div class="accordion-panel" data-accordion-panel-active="false">
-                      <p>
-                          Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies. Morbi viverra placerat justo, vel pharetra turpis. 
-                          Mé faiz elementum girarzis, nisi eros vermeio. 
-                          Eu nunca mais boto a boca num copo de cachaça, agora eu só uso canudis!
-                      </p>
-                    </div>
-                    
-                    <button id="bodysplash" class="accordion" data-behavior="accordion" data-accordion-active="false">Body Spray</button>
-                    <div class="accordion-panel" data-accordion-panel-active="false">
-                      <p>
-                          Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. 
-                          Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. 
-                          Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. 
-                          Detraxit consequat et quo num tendi nada.
-                      </p>
-                    </div>
-                </section>
-                <section class="product-photo">
-                    <div class="photo-container">
-                      <img src="images/products/creme.jpg" alt="Creme Para Pele" 
-                          data-accordion-picture="cream" 
-                          data-picture-active="false" />
-                      <img src="images/products/bodysplash.jpg" alt="Body Splash" 
-                          data-accordion-picture="bodysplash" 
-                          data-picture-active="false" />
-                    </div>
-                </section>
-            </div>
+          <!-- Carousel Indicators -->
+          <div class="carousel-indicators" id="carouselIndicators">
+              <div class="carousel-indicator active" data-slide="0"></div>
+              <div class="carousel-indicator" data-slide="1"></div>
+              <div class="carousel-indicator" data-slide="2"></div>
+              <div class="carousel-indicator" data-slide="3"></div>
+          </div>
+      </section>
 
-            <div class="content" data-behavior="tabs-content" data-tab-content="home" data-tab-content-active="false">
-                <section class="product-description">
-                    <button id="difusor" class="accordion" data-behavior="accordion" data-accordion-active="false">Difusor Gel</button>
-                    <div class="accordion-panel" data-accordion-panel-active="false">
-                      <p>
-                          Manduma pindureta quium dia nois paga. Nulla id gravida magna, ut semper sapien. 
-                          Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! 
-                          Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                      </p>
-                    </div>
-                    
-                    <button id="homespray" class="accordion" data-behavior="accordion" data-accordion-active="false">Home Spray</button>
-                    <div class="accordion-panel" data-accordion-panel-active="false">
-                      <p>
-                          Eu nunca mais boto a boca num copo de cachaça, agora eu só uso canudis! Diuretics paradis num copo é motivis de denguis. 
-                          Si num tem leite então bota uma pinga aí cumpadi! 
-                          Pellentesque nec nulla ligula. Donec gravida turpis a vulputate ultricies.
-                      </p>
-                    </div>
-                </section>
-                <section class="product-photo">
-                    <div class="photo-container">
-                        <img src="images/products/difusor.jpg" alt="Difusor em Gel" 
-                            data-accordion-picture="difusor" 
-                            data-picture-active="false" />
-                        <img src="images/products/homespray.jpg" alt="Home Spray" 
-                            data-accordion-picture="homespray"
-                            data-picture-active="false" />
-                    </div>
-                </section>
-            </div>
-
-            <div class="content" data-behavior="tabs-content" data-tab-content="relax" data-tab-content-active="false">
-                <section class="product-description">
-                    <button id="sais" class="accordion" data-behavior="accordion" data-accordion-active="false">Sais de Banho</button>
-                    <div class="accordion-panel" data-accordion-panel-active="false">
-                      <p>
-                          Manduma pindureta quium dia nois paga. Nulla id gravida magna, ut semper sapien. 
-                          Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! 
-                          Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
-                      </p>
-                    </div>
-                </section>
-                <section class="product-photo">
-                    <div class="photo-container">
-                        <img src="images/products/sais.jpg" alt="Sais de Banho" 
-                            data-accordion-picture="sais"
-                            data-picture-active="false" />
-                    </div>
-                </section>
-            </div>
-        </section>
-
-        <h1 class="text-highlight">Veja depoimentos de quem já conhece nossos produtos!</h1>
-
-        <section id="testimonies">
-            <div class="carousel component">
-                <div class="client">
-                    <p>
-                      Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Pellentesque nec nulla ligula. 
-                      Donec gravida turpis a vulputate ultricies. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. 
-                      Sapien in monti palavris qui num significa nadis i pareci latim.
-                    </p>
-                    <span class="name">Mussum</span>
-                    <span class="city">São José do Rio Preto - SP</span>
-                </div>
-                <div class="client">
-                    <p>
-                      Viva Forevis aptent taciti sociosqu ad litora torquent. 
-                      Quem num gosta di mé, boa gentis num é. 
-                      Mé faiz elementum girarzis, nisi eros vermeio. 
-                      Detraxit consequat et quo num tendi nada.
-                    </p>
-                    <span class="name">Zacarias</span>
-                    <span class="city">Araraquara - SP</span>
-                </div>
-                <div class="client">
-                    <p>
-                      Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Per aumento de cachacis, eu reclamis. 
-                      Interagi no mé, cursus quis, vehicula ac nisi. Nulla id gravida magna, ut semper sapien.
-                    </p>
-                    <span class="name">Didi</span>
-                    <span class="city">Mirassol - SP</span>
-                </div>
-                <div class="client">
-                    <p>
-                      Sapien in monti palavris qui num significa nadis i pareci latim. 
-                      Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. 
-                      Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. 
-                      Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
-                    </p>
-                    <span class="name">Dedé</span>
-                    <span class="city">Amsterdam - NL</span>
-                </div>
-            </div>
-                
-        </section>
-
-        <h1 class="text-highlight">Entre em contato com a gente!</h1>
-
-        <section id="contact">
-            <div id="email" class="item component">
-                <i class="fa-solid fa-envelope"></i>
-                <span>jessica.galdes18@gmail.com</span>
-            </div>
-            <div id="whatsapp" class="item component">              
-                <i class="fa-brands fa-square-whatsapp"></i>
-                <span>(16) 98809-9057</span>
-            </div>
-            <div id="instagram" class="item component">              
-                <i class="fa-brands fa-square-instagram"></i>
-                <span>@osolsaboaria</span>              
-            </div>
-            <div id="facebook" class="item component">              
-                <i class="fa-brands fa-square-facebook"></i>
-                <span>O Sol Saboaria</span>
-            </div>
-        </section>
-
+      <!-- Customer Reviews -->
+      <section id="customer-review" class="carousel-content" aria-labelledby="reviews-title">
+          <h2 id="reviews-title">Veja o que nossos clientes falaram</h1>
+          <div class="carousel-card-text customer-card active" aria-hidden="true">
+            <p class="description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem 
+              </p>
+              <p class="customer-name"> Fulano da Silva </p>
+          </div>
+          <div class="carousel-card-text customer-card" aria-hidden="true">
+              <p class="description">
+                Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Em pé sem cair, deitado sem dormir, 
+                sentado sem cochilar e fazendo pose. Suco de cevadiss deixa as pessoas mais interessantis. Eu nunca mais boto a boca num copo de cachaça, agora eu só uso canudis!
+              </p>
+              <p class="customer-name"> Ciclano de Souza </p>
+          </div>
+          <div class="carousel-card-text customer-card" aria-hidden="true">
+            <p class="description">
+              Pokem ipsum dolor sit amet Exeggutor Kecleon Wing Attack Doduo Red Unown. Sunt in culpa Drilbur Calcium Hoenn Shieldon Wynaut Charizard. Growl Venonat 
+              Scolipede Espeon Charizard Barboach Hidden Machine. Duis aute irure dolor in reprehenderit in voluptate they're comfy and easy to wear Onix what kind of 
+              Pokemon are you Fog Badge Ampharos Noctowl. Pewter City Marill Slakoth Bronzong Rattata Treecko Cottonee.
+              </p>
+              <p class="customer-name"> Beltrano Oliveira </p>
+          </div>
+      </section>
+      
     </main>
 
-    <footer>
-        <h4>O Sol Saboaria</h4>
-        <h4>Araraquara - SP</h4>
-        <h4>© Todos os direitos reservados</h4>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/accordion.js"></script>
-    <script src="js/tab.js"></script>
+      <div class="about">
+        <p>Sol e Espuma Saboaria</p>
+        <p>Rua Maria Marquezini Crippa, 187</p>
+        <p>Mirassol, SP</p>
+      </div>
+
+      <div class="contact">
+        <a href="https://www.instagram.com/soleespuma/" target="_blank">
+          <i class="fa-brands fa-instagram" alt="Instagram" class="social-icon"></i> @soleespuma
+        </a>
+        <a href="https://www.facebook.com/solespuma/" target="_blank">
+          <i class="fa-brands fa-facebook" alt="Facebook" class="social-icon"></i> @solespuma
+        </a>
+        <a href="https://wa.me/+5516988099057" target="_blank">
+          <i class="fa-brands fa-whatsapp" alt="WhatsApp" class="social-icon"></i> (16) 98809-9057
+        </a>
+        <a href="mailto:soleespuma@gmail.com" target="_blank">
+          <i class="fa-solid fa-envelope" alt="WhatsApp" class="social-icon"> </i> sol.espuma@gmail.com
+        </a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>&copy; Todos os direitos reservados.</p>
+    </div>
     
+  </footer>
+
+  <script src="js/main.js"></script>
+
 </body>
+    
+
 </html>

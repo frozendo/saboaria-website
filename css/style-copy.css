@@ -1,0 +1,746 @@
+@font-face {
+    font-family: 'Klaristha-Thin';
+    src: url('../webfonts/Klaristha-Thin.woff') format('woff'),
+         url('../webfonts/Klaristha-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+      font-family: 'Corbel';
+      src: url('../webfonts/corbel.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  
+  html {
+      font-family: 'Corbel', serif;
+      width: 100%;
+      overflow-x: hidden;
+  }
+  
+  body {
+    font-family: 'Corbel', serif;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Banner */
+  
+  .banner {
+    background-image: url('../images/banner.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 15px;
+    height: 60vh;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner .logo { 
+      background-image: url('../images/logo-200.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 120px;
+      margin-bottom: 0.5rem;
+  }
+  
+  .banner h1 {
+      font-size: 6rem;
+      max-width: 800px;
+      font-weight: bold;
+      margin-bottom: 0;
+      font-family: 'Klaristha-Thin', serif;
+  }
+    
+  .banner .slogan {
+      font-size: 2rem;
+      width: 130vh;
+      margin-bottom: 0.5rem;
+      max-width: 600px;
+  }
+  
+  .btn-custom {
+    display: inline-block;
+    background-image: linear-gradient(
+      90deg, 
+      #c88113 0%, 
+      #eaba33 35%, 
+      #f6e190 50%, 
+      #deb853 65%, 
+      #f6bd05 100%
+    );
+    color: #1d1d1b;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #d9a441;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-custom:hover {
+      cursor: pointer;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-custom:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 5vh auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Info */
+  
+  .info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin: 20px
+  }
+  
+  .info .text {
+      font-size: 1.2rem;
+      text-align: center;
+      width: 50%;
+      padding: 20px;
+      margin: 20px;
+  }
+  
+  .info .full-text {
+      font-size: 1.2rem;
+      text-align: center;
+      width: 70%;
+      padding: 20px;
+      margin: 20px;
+  }
+  
+  .info .text h1 {
+      font-family: 'Klaristha-Thin', serif;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  .info .image {
+      background-image: linear-gradient(60deg, #1d1d1b 0%, #2a2a28 25%, #1d1d1b 75%, #000000 100%);
+      width: 50%;
+      height: 500px;
+      border-radius: 15px;
+      margin: 20px;
+  }
+  
+  .customer-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+  }
+  
+  /* Marketing */
+  
+  .marketing {
+      background-image: linear-gradient(90deg, #1d1d1b 0%, #2a2a28 25%, #1d1d1b 75%, #000000 100%);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      height: 500px;
+      margin: 20px;
+      border-radius: 15px;
+  }
+  
+  .marketing .text {
+      display: block;
+      font-size: 1.2rem;
+      text-align: center;
+      width: 50%;
+      padding: 20px;
+      margin: 20px;
+      color: #ffffff;
+  }
+  
+  .marketing .text h1 {
+      font-family: 'Klaristha-Thin', serif;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffffff;
+  }
+  
+  .marketing .image {
+      background-color: transparent;
+      width: 50%;
+      height: 500px;
+      border-radius: 15px;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+  }
+  
+  /* Products */
+  
+  .products {
+      height: 600px;
+      margin-top: 30px;
+      text-align: center;
+      position: relative;
+  }
+  
+  .products h2 {
+      font-family: 'Klaristha-Thin', serif;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+  }
+  
+  .products-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      position: relative;
+      padding: 20px 0;
+  }
+  
+  .product-card {
+      background-image: linear-gradient(60deg, #1d1d1b 0%, #2a2a28 25%, #1d1d1b 75%, #000000 100%);
+      width: 450px;
+      min-width: 450px;
+      height: 500px;
+      border-radius: 15px;
+      margin: 0 20px;
+      color: #ffffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0px;
+  }
+  
+  .product-card p {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 20px 0px;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  /* Carousel Navigation */
+  .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(29, 29, 27, 0.8);
+      border: none;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+  }
+  
+  .carousel-nav:hover {
+      background: rgba(217, 164, 65, 0.9);
+      transform: translateY(-50%) scale(1.1);
+  }
+  
+  .carousel-nav.prev {
+      left: -60px;
+  }
+  
+  .carousel-nav.next {
+      right: -60px;
+  }
+  
+  .carousel-nav:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+  }
+  
+  .carousel-nav:disabled:hover {
+      background: rgba(29, 29, 27, 0.8);
+      transform: translateY(-50%);
+  }
+  
+  /* Carousel Indicators */
+  .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+  }
+  
+  .carousel-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(29, 29, 27, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  .carousel-indicator.active {
+      background: #d9a441;
+      transform: scale(1.2);
+  }
+  
+  /* Footer */
+  
+  .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0e0cf;
+      padding: 20px 20px;
+  }
+  
+  .footer .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1d1d1b;
+  }
+  
+  .footer .content .about {
+    width: 30%;
+    font-size: 1rem;
+  }
+  
+  .footer .content .about h5 {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .footer .content .contact {
+    width: 30%;
+    font-size: 1rem;
+  }
+  
+  .footer .content .contact #whatsapp {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+  }
+  
+  .footer .copyright {
+    text-align: center;
+    font-size: 1rem;
+    height: 20px;
+  }
+  
+  .footer .social-media {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .footer .social-media img {
+      margin: 10px;
+  }
+  
+  /* Custom Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+  }
+  
+  .modal-dialog {
+    background: white;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal.show .modal-dialog {
+    transform: scale(1);
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .modal-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1d1d1b;
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .modal-close:hover {
+    color: #1d1d1b;
+    background-color: #f0f0f0;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-body p {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Modal animation */
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes modalFadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+  }
+  
+  /* Animate backdrop */
+  .modal-backdrop.show {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Animate close button */
+  .btn-close {
+    transition: transform 0.2s ease;
+  }
+  
+  .btn-close:hover {
+    transform: rotate(90deg) scale(1.2);
+  }
+  
+  /* Header Bar */
+  .header-bar {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    right: 0;
+    background: rgba(29, 29, 27, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    border-bottom: 1px solid rgba(217, 164, 65, 0.3);
+  }
+  
+  .header-bar.show {
+    top: 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .header-brand {
+    font-family: 'Klaristha-Thin', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    height: 40px;
+  }
+  
+  .header-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+  
+  /* Mobile responsive for header */
+  @media (max-width: 768px) {
+    .header-content {
+      padding: 10px 15px;
+    }
+    
+    .header-logo-img {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .header-brand {
+      font-size: 1.2rem;
+    }
+    
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .header-social {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-content {
+      padding: 8px 10px;
+    }
+    
+    .header-logo {
+      gap: 10px;
+    }
+    
+    .header-brand {
+      font-size: 1rem;
+    }
+    
+    .social-icon {
+      width: 18px;
+      height: 18px;
+    }
+    
+    .header-social {
+      gap: 12px;
+    }
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 1200px) { 
+      .banner {
+          min-height: 600px;
+      }
+  
+      .banner h1 {
+          font-size: 5rem;
+      }
+    
+      .banner .slogan {
+          font-size: 1.6rem;
+      }
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .banner {
+      height: 50vh;
+      min-height: 400px;
+      padding: 60px 15px;
+    }
+  
+    .banner .logo { 
+        background-image: url('../images/logo-150.png');
+        width: 150px;
+        height: 90px;
+    }
+    
+    .banner h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0;
+      max-width: 500px;
+    }
+    
+    .banner .slogan {
+      font-size: 1.5rem;
+      max-width: 400px;
+      margin-bottom: 1rem;
+    }
+    
+    .banner .btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .container {
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 620px) {
+      .banner {
+        min-height: 400px;
+      }
+    
+      .banner h1 {
+        font-size: 3rem;
+      }
+      
+      .banner .slogan {
+        font-size: 1.2rem;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .banner {
+      background-image: linear-gradient(135deg, #1d1d1b 0%, #2a2a28 50%, #1d1d1b 100%);
+      height: 40vh;
+      min-height: 350px;
+      padding: 40px 10px;
+    }
+  
+    .container {
+      padding: 0 10px;
+    }
+  }
+  
+  /* Mobile responsive for carousel */
+  @media (max-width: 768px) {
+      .products {
+          height: 500px;
+      }
+      
+      .product-card {
+          width: 280px;
+          min-width: 280px;
+          height: 400px;
+          margin: 0 15px;
+      }
+      
+      .carousel-nav {
+          width: 40px;
+          height: 40px;
+      }
+      
+      .carousel-nav.prev {
+          left: 10px;
+      }
+      
+      .carousel-nav.next {
+          right: 10px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .products {
+          height: 450px;
+      }
+      
+      .product-card {
+          width: 250px;
+          min-width: 250px;
+          height: 350px;
+          margin: 0 10px;
+      }
+      
+      .carousel-nav {
+          width: 35px;
+          height: 35px;
+      }
+  }

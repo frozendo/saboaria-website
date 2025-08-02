@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Sabonetes",
+      "image": "./images/update/product-left.png",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.",
+      "modalId": "modal1",
+      "modalTitle": "Sabonetes Artesanais",
+      "modalImage": "./images/update/product-left.png",
+      "modalDescription": "Nossos sabonetes artesanais são feitos com ingredientes 100% naturais, proporcionando uma experiência única de cuidado com a pele. Cada barra é cuidadosamente elaborada para oferecer hidratação e limpeza suave."
+    },
+    {
+      "id": 2,
+      "title": "Cremes",
+      "image": "./images/update/product-center.png",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.",
+      "modalId": "modal2",
+      "modalTitle": "Cremes Hidratantes",
+      "modalImage": "./images/update/product-center.png",
+      "modalDescription": "Nossos cremes hidratantes são formulados com óleos essenciais e manteigas naturais, oferecendo hidratação profunda e duradoura. Ideal para todos os tipos de pele, proporcionando suavidade e elasticidade."
+    },
+    {
+      "id": 3,
+      "title": "Difusores",
+      "image": "./images/update/product-right.png",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.",
+      "modalId": "modal3",
+      "modalTitle": "Difusores de Aromas",
+      "modalImage": "./images/update/product-right.png",
+      "modalDescription": "Nossos difusores de aromas transformam qualquer ambiente em um refúgio de tranquilidade. Com óleos essenciais puros, criam uma atmosfera relaxante e revigorante para sua casa ou escritório."
+    }
+  ]
+} 
