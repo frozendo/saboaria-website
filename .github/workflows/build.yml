@@ -54,13 +54,10 @@ jobs:
         echo "Processing CSS files..."
         
         # Minify processed CSS
-        cleancss -o dist/css/style.min.css dist/css/style.temp.css
+        cleancss -o dist/css/style.min.css css/style.css
         
         # Process modal.css
-        cleancss -o dist/css/modal.min.css dist/css/modal.temp.css
-        
-        # Clean up temp files
-        rm dist/css/*.temp.css
+        cleancss -o dist/css/modal.min.css css/modal.css
         
     - name: Process and minify JavaScript files
       run: |
