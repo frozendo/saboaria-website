@@ -1,0 +1,148 @@
+name: Build and Deploy Sol e Espuma Saboaria Website
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g clean-css-cli
+        npm install -g terser
+        npm install -g html-minifier-terser
+        npm install -g imagemin-cli
+        npm install -g imagemin-mozjpeg
+        npm install -g imagemin-pngquant
+        npm install -g imagemin-gifsicle
+        npm install -g imagemin-svgo
+        
+    - name: Create dist directory
+      run: mkdir -p dist
+      
+    - name: Copy static assets
+      run: |
+        cp -r images dist/
+        cp -r webfonts dist/
+        cp products.json dist/
+        
+    - name: Optimize images
+      run: |
+        echo "Optimizing images..."
+        find dist/images -name "*.jpg" -exec imagemin {} --out-dir=dist/images \;
+        find dist/images -name "*.jpeg" -exec imagemin {} --out-dir=dist/images \;
+        find dist/images -name "*.png" -exec imagemin {} --out-dir=dist/images \;
+        find dist/images -name "*.gif" -exec imagemin {} --out-dir=dist/images \;
+        find dist/images -name "*.svg" -exec imagemin {} --out-dir=dist/images \;
+        
+    - name: Process and minify CSS files
+      run: |
+        echo "Processing CSS files..."
+        
+        # Minify processed CSS
+        cleancss -o dist/css/style.min.css dist/css/style.temp.css
+        
+        # Process modal.css
+        cleancss -o dist/css/modal.min.css dist/css/modal.temp.css
+        
+        # Clean up temp files
+        rm dist/css/*.temp.css
+        
+    - name: Process and minify JavaScript files
+      run: |
+        echo "Processing JavaScript files..."
+        # Process main.js with text replacement
+        
+        # Minify processed JS
+        terser dist/js/main.temp.js -o dist/js/main.min.js --compress --mangle
+        
+        # Clean up temp files
+        rm dist/js/*.temp.js
+        
+    - name: Process and minify HTML files
+      run: |
+        echo "Processing HTML files..."
+        
+        # Minify processed HTML
+        html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true dist/index.temp.html -o dist/index.html
+        
+        # Clean up temp files
+        rm dist/index.temp.html
+        
+    - name: Update HTML references to minified files
+      run: |
+        echo "Updating HTML references..."
+        sed -i 's/css\/style\.css/css\/style.min.css/g' dist/index.html
+        sed -i 's/css\/modal\.css/css\/modal.min.css/g' dist/index.html
+        sed -i 's/js\/main\.js/js\/main.min.js/g' dist/index.html
+        
+    - name: Create build info
+      run: |
+        echo "Creating build info..."
+        cat > dist/build-info.json << EOF
+        {
+          "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+          "version": "1.0.0",
+          "buildType": "production",
+          "textProcessing": {
+            "variables": {
+              "SITE_NAME": "Sol e Espuma Saboaria",
+              "SITE_DESCRIPTION": "Produtos Artesanais 100% Naturais",
+              "CONTACT_PHONE": "(16) 98809-9057",
+              "CONTACT_EMAIL": "sol.espuma@gmail.com",
+              "INSTAGRAM": "@soleespuma",
+              "FACEBOOK": "@solespuma",
+              "YEAR": "2024"
+            }
+          },
+          "optimizations": {
+            "cssMinification": true,
+            "jsMinification": true,
+            "htmlMinification": true,
+            "imageOptimization": true,
+            "textProcessing": true
+          }
+        }
+        EOF
+        
+    - name: Calculate build statistics
+      run: |
+        echo "Calculating build statistics..."
+        echo "Build completed successfully!"
+        echo "Total size: $(du -sh dist | cut -f1)"
+        echo "Files processed: $(find dist -type f | wc -l)"
+        echo "CSS files: $(find dist -name "*.css" | wc -l)"
+        echo "JS files: $(find dist -name "*.js" | wc -l)"
+        echo "HTML files: $(find dist -name "*.html" | wc -l)"
+        echo "Image files: $(find dist -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" -o -name "*.svg" | wc -l)"
+        
+    # - name: Create deployment package
+    #   run: |
+    #     cd dist
+    #     tar -czf ../website-build.tar.gz .
+
+    - name: Deploy To Azure Static Web App
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e. PR comments)
+          action: "upload"
+          app_location: "/dist"
+          output_location: ""
+          skip_app_build: true

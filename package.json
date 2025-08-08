@@ -1,0 +1,54 @@
+{
+  "name": "saboaria-website",
+  "version": "1.0.0",
+  "description": "Sol e Espuma Saboaria Website with advanced build optimization",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build.js",
+    "build:simple": "npm run clean && npm run copy-assets && npm run minify-css && npm run minify-js && npm run minify-html && npm run update-html",
+    "clean": "rm -rf dist && mkdir -p dist",
+    "copy-assets": "cp -r images dist/ && cp -r webfonts dist/ && cp products.json dist/",
+    "minify-css": "cleancss -o dist/css/style.min.css css/style.css && cleancss -o dist/css/modal.min.css css/modal.css",
+    "minify-js": "terser js/main.js -o dist/js/main.min.js --compress --mangle",
+    "minify-html": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html -o dist/index.html",
+    "update-html": "sed -i 's/css\\/style.css/css\\/style.min.css/g' dist/index.html && sed -i 's/css\\/modal.css/css\\/modal.min.css/g' dist/index.html && sed -i 's/js\\/main.js/js\\/main.min.js/g' dist/index.html",
+    "serve": "cd dist && python3 -m http.server 8000",
+    "dev": "npm run build && npm run serve",
+    "preview": "npm run build && open dist/index.html",
+    "deploy": "npm run build && echo 'Build ready for deployment in dist/ folder'",
+    "optimize-images": "node -e \"require('./build-optimized.js').optimizeImages()\"",
+    "test-build": "npm run build && echo 'Build test completed successfully'"
+  },
+  "keywords": [
+    "saboaria",
+    "website",
+    "artesanal",
+    "produtos-naturais",
+    "build-optimization",
+    "image-optimization",
+    "text-processing"
+  ],
+  "author": "Sol e Espuma Saboaria",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.24.0",
+    "html-minifier-terser": "^7.2.0",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-svgo": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/saboaria-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/saboaria-website/issues"
+  },
+  "homepage": "https://github.com/yourusername/saboaria-website#readme"
+} 
