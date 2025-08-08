@@ -65,20 +65,14 @@ jobs:
         # Process main.js with text replacement
         
         # Minify processed JS
-        terser dist/js/main.temp.js -o dist/js/main.min.js --compress --mangle
-        
-        # Clean up temp files
-        rm dist/js/*.temp.js
+        terser js/main.js -o dist/js/main.min.js --compress --mangle
         
     - name: Process and minify HTML files
       run: |
         echo "Processing HTML files..."
         
         # Minify processed HTML
-        html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true dist/index.temp.html -o dist/index.html
-        
-        # Clean up temp files
-        rm dist/index.temp.html
+        html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html -o dist/index.html
         
     - name: Update HTML references to minified files
       run: |
@@ -86,35 +80,6 @@ jobs:
         sed -i 's/css\/style\.css/css\/style.min.css/g' dist/index.html
         sed -i 's/css\/modal\.css/css\/modal.min.css/g' dist/index.html
         sed -i 's/js\/main\.js/js\/main.min.js/g' dist/index.html
-        
-    - name: Create build info
-      run: |
-        echo "Creating build info..."
-        cat > dist/build-info.json << EOF
-        {
-          "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-          "version": "1.0.0",
-          "buildType": "production",
-          "textProcessing": {
-            "variables": {
-              "SITE_NAME": "Sol e Espuma Saboaria",
-              "SITE_DESCRIPTION": "Produtos Artesanais 100% Naturais",
-              "CONTACT_PHONE": "(16) 98809-9057",
-              "CONTACT_EMAIL": "sol.espuma@gmail.com",
-              "INSTAGRAM": "@soleespuma",
-              "FACEBOOK": "@solespuma",
-              "YEAR": "2024"
-            }
-          },
-          "optimizations": {
-            "cssMinification": true,
-            "jsMinification": true,
-            "htmlMinification": true,
-            "imageOptimization": true,
-            "textProcessing": true
-          }
-        }
-        EOF
         
     - name: Calculate build statistics
       run: |
