@@ -39,7 +39,6 @@ jobs:
       run: |
         cp -r images dist/
         cp -r webfonts dist/
-        cp products.json dist/
         
     - name: Optimize images
       run: |
