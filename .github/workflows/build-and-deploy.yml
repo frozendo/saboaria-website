@@ -2,13 +2,12 @@ name: Build and Deploy Sol e Espuma Saboaria Website
 
 on:
   push:
-    branches: [ main, master ]
+    branches: main,
   pull_request:
-    branches: [ main, master ]
-  workflow_dispatch:
+    branches: main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
