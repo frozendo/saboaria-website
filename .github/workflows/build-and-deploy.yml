@@ -2,7 +2,7 @@ name: Build and Deploy Sol e Espuma Saboaria Website
 
 on:
   push:
-    branches: main,
+    branches: main
   pull_request:
     branches: main
 
